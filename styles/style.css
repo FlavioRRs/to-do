@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+main {
+  max-height: 313px;
+  padding: 0 25px;
+}
+
+.inputArea {
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 100px 50px 100px;
+}
+
+.inputArea label {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.inputArea input {
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.inputArea .buttons {
+  width: 100%;
+  display: flex;
+}
+
+.inputArea .buttons #insert {
+  flex-grow: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px 0 0 5px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.inputArea .buttons #insert:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.inputArea .buttons #deleteList {
+  font-weight: bold;
+  padding: 0px 5px;
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  transition: 0.5s;
+}
+
+.inputArea .buttons #deleteList:hover {
+  background-color: rgb(48, 0, 0);
+  cursor: pointer;
+  color: white;
+}
+
+.list {
+  padding: 20px 0 10px 0;
+}
+
+.listElement {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
+}
+
+.delete {
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: red;
+  cursor: pointer;
+}

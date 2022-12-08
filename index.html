@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de afazeres</title>
+    <meta
+      name="description"
+      content="Este é um site básico onde você pode inserir seus afazeres em uma lista."
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/2387/2387635.png"
+    />
+    <script src="./scripts/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="inputArea">
+        <label for="inputTarefa">Insira sua tarefa!</label>
+        <input
+          id="inputTarefa"
+          type="text"
+          placeholder="Assistir breaking bad..."
+          maxlength="30"
+          list="afazeres"
+        />
+        <div class="buttons">
+          <button id="insert">Adicionar tarefa</button>
+          <button id="deleteList">Deletar lista</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
