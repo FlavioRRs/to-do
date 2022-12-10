@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Signika", sans-serif;
 }
 
 body {
@@ -34,6 +34,7 @@ main {
 .inputArea label {
   font-size: 3rem;
   font-weight: bold;
+  text-shadow: 2px 2px 5px#666;
 }
 
 .inputArea input {
@@ -42,21 +43,28 @@ main {
   padding: 8px;
   border-radius: 10px;
   font-size: 1.2rem;
+  border: none;
+  background: #ffffff;
+  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
 }
 
 .inputArea .buttons {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .inputArea .buttons #insert {
-  flex-grow: 1;
   padding: 10px 0;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   background-color: white;
   transition: 0.5s;
+  border: none;
+  background: #ffffff;
+  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
 }
 
 .inputArea .buttons #insert:hover {
@@ -66,13 +74,16 @@ main {
 }
 
 .inputArea .buttons #deleteList {
+  border-left: none;
   font-weight: bold;
-  padding: 0px 5px;
+  padding: 10px 0;
   background-color: white;
   font-size: 1rem;
-  color: black;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   transition: 0.5s;
+  border: none;
+  background: #ffffff;
+  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
 }
 
 .inputArea .buttons #deleteList:hover {
@@ -87,19 +98,52 @@ main {
 
 .listElement {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
-  margin: 15px 0;
+  margin: 20px 0;
   font-size: 1.2rem;
   border-radius: 5px;
   box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
 }
 
-.delete {
+.deleteButton {
   font-weight: bold;
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  color: red;
+  color: gray;
   cursor: pointer;
+  transition: color 0.5s;
+}
+
+.deleteButton:hover {
+  color: red;
+  text-shadow: 2px 2px 3px lightcoral;
+}
+
+.doneButton {
+  margin-right: 8px;
+  color: gray;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.doneButton:hover {
+  color: green;
+  text-shadow: 2px 2px 3px lightgreen;
+}
+
+.markedAsDone {
+  text-decoration: line-through;
+  opacity: 0.5;
+  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
+}
+
+.buttonDone {
+  color: green;
+  text-shadow: 2px 2px 3px lightgreen;
 }
