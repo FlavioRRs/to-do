@@ -6,144 +6,130 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 200px;
+  background: linear-gradient(45deg, #cbdad5, #89a7b1) no-repeat;
 }
 
 main {
-  max-height: 313px;
-  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #24434b;
+  border-bottom: 3px solid #16292e;
+  padding: 25px 0;
 }
 
 .inputArea {
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
+  width: 60%;
+  row-gap: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
-  padding: 25px 100px 50px 100px;
-}
-
-.inputArea label {
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px#666;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .inputArea input {
+  flex-grow: 1;
   outline: none;
-  width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  border: 3px solid #16292e;
+  color: #24434b;
+  background: linear-gradient(45deg, #cbdad5, #89a7b1);
+}
+
+.inputArea input::placeholder {
+  color: #24434b;
+}
+
+.buttons #insert {
+  margin: 0 15px;
+  font-size: 2rem;
+  background-color: transparent;
   border: none;
-  background: #ffffff;
-  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
-}
-
-.inputArea .buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.inputArea .buttons #insert {
-  padding: 10px 0;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  background-color: white;
-  transition: 0.5s;
-  border: none;
-  background: #ffffff;
-  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
-}
-
-.inputArea .buttons #insert:hover {
+  color: #89a7b1;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  transition: color 0.5s;
 }
 
-.inputArea .buttons #deleteList {
-  border-left: none;
-  font-weight: bold;
-  padding: 10px 0;
-  background-color: white;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: 0.5s;
+.buttons #insert:hover {
+  color: #a9f04d;
+}
+
+.buttons #erase {
+  font-size: 2rem;
   border: none;
-  background: #ffffff;
-  box-shadow: 5px 5px 8px #666666, -5px -5px 8px #ffffff;
-}
-
-.inputArea .buttons #deleteList:hover {
-  background-color: rgb(48, 0, 0);
+  color: #89a7b1;
+  background-color: transparent;
   cursor: pointer;
-  color: white;
+  transition: color 0.5s;
 }
 
-.list {
-  padding: 20px 0 10px 0;
+.buttons #erase:hover {
+  color: #cf391d;
 }
+
+/* Parte de estilização da lista */
 
 .listElement {
+  max-width: 60%;
+  color: #89a7b1;
+  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  margin: 20px 0;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
+  gap: 15px;
+  padding: 15px;
+  font-size: 1.5rem;
+  background-color: #24434b;
+  border-radius: 10px;
+  word-break: break-word;
+  transition: opacity 0.3s;
+}
+
+/* Estilização dos elementos adicionados pelo JS */
+
+.controlsOfTheElementAndTheTimer p{
+  font-size: 1rem;
+  word-break: normal;
+ color: #89a7b1;
 }
 
 .deleteButton {
-  font-weight: bold;
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
-  color: gray;
+  color: #89a7b1;
   cursor: pointer;
   transition: color 0.5s;
 }
 
 .deleteButton:hover {
-  color: red;
-  text-shadow: 2px 2px 3px lightcoral;
+  color: #cf391d;
 }
 
 .doneButton {
-  margin-right: 8px;
-  color: gray;
-  font-weight: bold;
+  margin: 0px 10px;
+  color: #89a7b1;
   font-size: 1.2rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: color 0.5s;
 }
 
 .doneButton:hover {
-  color: green;
-  text-shadow: 2px 2px 3px lightgreen;
+  color: #a9f04d;
 }
 
-.markedAsDone {
+.activityDone {
   text-decoration: line-through;
   opacity: 0.5;
-  box-shadow: 5px 5px 11px #666666, -5px -5px 11px #ffffff;
 }
 
-.buttonDone {
-  color: green;
-  text-shadow: 2px 2px 3px lightgreen;
+.buttonActivityDone {
+  color: #a9f04d;
 }

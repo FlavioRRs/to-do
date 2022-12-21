@@ -1,7 +1,11 @@
 # to-do
 
-Aqui estou construindo uma lista dinâmica de afazeres,o famoso TO-DO-LIST.
-Criei para utilizar alguns conhecimentos de HTML, CSS e JavaScript DOM.
-# Pretendo fazer updates futuros:
-- Adicionar um botão de atividade executada
-- Adicionar tempo nas atividades
+Neste pequeno projeto eu procurei desenvolver uma lista de afazeres bem simples, onde o usuário possa inserir sua atividade, marcar a atividade como completa e também remover a atividade.
+
+Projeto todo feito com HTML, CSS E JavaScript.
+
+## Possíveis futuras atualizações
+
+[x] Adicionar um botão de atividade executada
+[x] Adicionar tempo nas atividades
+[ ] Implementar um local storage

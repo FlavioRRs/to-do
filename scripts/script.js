@@ -1,51 +1,67 @@
-const main = document.querySelector("main");
+const body = document.querySelector("body");
 const input = document.querySelector("input");
 const buttonAddElementInList = document.querySelector("button");
-const deleteListButton = document.querySelector("#deleteList");
+const buttonEraseList = document.querySelector("#erase");
 const ul = document.createElement("ul");
 
 ul.classList.add("list");
-main.append(ul);
+body.append(ul);
 
+// Funções de adicionar elemento na lista, marcar como feito e deletar o elemento específico.
 buttonAddElementInList.addEventListener("click", () => {
   if (input.value === "") {
     return;
   }
 
   const li = document.createElement("li");
+
   li.innerText = input.value;
+
   li.classList.add("listElement");
 
-  const div = document.createElement("div");
+  const controlsOfTheElementAndTheTimer = document.createElement("div");
+  controlsOfTheElementAndTheTimer.classList.add("controlsOfTheElementAndTheTimer")
 
-  const deleteListElementButton = document.createElement("button");
-  deleteListElementButton.innerText = "X";
-  deleteListElementButton.classList.add("deleteButton");
+  const deleteElement = document.createElement("button");
+  deleteElement.innerHTML = `<i class="fa-solid fa-x"></i>`;
+  deleteElement.classList.add("deleteButton");
 
-  const markAsDone = document.createElement("button");
-  markAsDone.innerText = "V";
-  markAsDone.classList.add("doneButton");
+  const buttonThatMarkAnActivityAsDone = document.createElement("button");
+  buttonThatMarkAnActivityAsDone.innerHTML = `<i class="fa-solid fa-check"></i>`;
+  buttonThatMarkAnActivityAsDone.classList.add("doneButton");
 
-  div.append(markAsDone);
-  div.append(deleteListElementButton);
-  li.append(div);
+  const timer = document.createElement("p");
+
+  timer.innerText = new Date().toLocaleTimeString("pt-br", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  })
+
+ 
+
+  controlsOfTheElementAndTheTimer.append(buttonThatMarkAnActivityAsDone);
+  controlsOfTheElementAndTheTimer.append(deleteElement);
+  controlsOfTheElementAndTheTimer.append(timer)
+  li.append(controlsOfTheElementAndTheTimer);
   ul.prepend(li);
 
   input.value = "";
 
-  deleteListElementButton.addEventListener("click", () => {
+  deleteElement.addEventListener("click", () => {
     if (confirm("Deseja mesmo deletar este elemento?")) {
-      deleteListElementButton.parentElement.parentElement.remove();
+      deleteElement.parentElement.parentElement.remove();
     }
   });
 
-  markAsDone.addEventListener("click", () => {
-    markAsDone.parentElement.parentElement.classList.toggle("markedAsDone");
-    markAsDone.classList.toggle("buttonDone");
+  buttonThatMarkAnActivityAsDone.addEventListener("click", () => {
+    buttonThatMarkAnActivityAsDone.parentElement.parentElement.classList.toggle("activityDone");
+    buttonThatMarkAnActivityAsDone.classList.toggle("buttonActivityDone");
   });
 });
 
-deleteListButton.addEventListener("click", () => {
+//Função de apagar a lista completamente.
+buttonEraseList.addEventListener("click", () => {
   if (confirm("Deseja deletar a lista por completo?")) {
     ul.innerHTML = ``;
   }

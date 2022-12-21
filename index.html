@@ -22,21 +22,20 @@
       href="https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/28809174c6.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <main>
       <section class="inputArea">
-        <label for="inputTarefa">Insira sua tarefa!</label>
         <input
           id="inputTarefa"
           type="text"
-          placeholder="Assistir breaking bad..."
-          maxlength="30"
+          placeholder="Digite sua tarefa..."
           list="afazeres"
         />
         <div class="buttons">
-          <button id="insert">Adicionar tarefa</button>
-          <button id="deleteList">Deletar lista</button>
+          <button id="insert"><i class="fa-solid fa-plus"></i></button>
+          <button id="erase"><i class="fa-sharp fa-solid fa-trash"></i></button>
         </div>
       </section>
     </main>
