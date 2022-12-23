@@ -22,7 +22,7 @@ main {
 }
 
 .inputArea {
-  width: 60%;
+  width: 80%;
   row-gap: 15px;
   display: flex;
   align-items: center;
@@ -59,7 +59,7 @@ main {
   color: #a9f04d;
 }
 
-.buttons #erase {
+.buttons #eraseList {
   font-size: 2rem;
   border: none;
   color: #89a7b1;
@@ -68,14 +68,14 @@ main {
   transition: color 0.5s;
 }
 
-.buttons #erase:hover {
+.buttons #eraseList:hover {
   color: #cf391d;
 }
 
 /* Parte de estilização da lista */
 
-.listElement {
-  max-width: 60%;
+ul li{
+  max-width: 80%;
   color: #89a7b1;
   margin: 20px auto;
   display: flex;
@@ -92,13 +92,13 @@ main {
 
 /* Estilização dos elementos adicionados pelo JS */
 
-.controlsOfTheElementAndTheTimer p{
+ul > li > div > p{
   font-size: 1rem;
   word-break: normal;
  color: #89a7b1;
 }
 
-.deleteButton {
+.deleteItemButton {
   background-color: transparent;
   border: none;
   font-size: 1.2rem;
@@ -107,11 +107,11 @@ main {
   transition: color 0.5s;
 }
 
-.deleteButton:hover {
+.deleteItemButton:hover {
   color: #cf391d;
 }
 
-.doneButton {
+.markButton {
   margin: 0px 10px;
   color: #89a7b1;
   font-size: 1.2rem;
@@ -121,7 +121,7 @@ main {
   transition: color 0.5s;
 }
 
-.doneButton:hover {
+.markButton:hover {
   color: #a9f04d;
 }
 

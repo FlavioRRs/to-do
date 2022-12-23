@@ -6,6 +6,6 @@ Projeto todo feito com HTML, CSS E JavaScript.
 
 ## Possíveis futuras atualizações
 
-[x] Adicionar um botão de atividade executada
-[x] Adicionar tempo nas atividades
-[ ] Implementar um local storage
+- [x]Adicionar um botão de atividade executada
+- [x]Adicionar tempo nas atividades
+- [ ]Implementar um local storage
